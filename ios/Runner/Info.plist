@@ -4,6 +4,16 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+
+    <key>NSFaceIDUsageDescription</key>
+    <string>We need to use Face ID to authenticate and secure your notes</string>
+
+    <key>CFBundleLocalizations</key>
+    <array>
+        <string>en</string>
+        <string>sw</string>
+    </array>
+
 	<key>CFBundleDisplayName</key>
 	<string>Secure Notes</string>
 	<key>CFBundleExecutable</key>
