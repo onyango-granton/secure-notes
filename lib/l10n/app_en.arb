@@ -1,0 +1,20 @@
+{
+  "appTitle": "Secure Notes",
+  "myNotes": "My Notes",
+  "addNote": "Add Note",
+  "editNote": "Edit Note",
+  "title": "Title",
+  "description": "Description",
+  "save": "Save",
+  "cancel": "Cancel",
+  "delete": "Delete",
+  "emptyFieldError": "Please fill in all fields",
+  "authenticationRequired": "Authentication Required",
+  "authenticateToAccess": "Please authenticate to access your notes",
+  "authenticate": "Authenticate",
+  "authenticationFailed": "Authentication failed. Please try again.",
+  "noNotes": "No notes yet. Tap + to add one!",
+  "confirmDelete": "Are you sure you want to delete this note?",
+  "yes": "Yes",
+  "no": "No"
+}

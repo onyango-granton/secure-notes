@@ -62,7 +62,8 @@ import 'app_localizations_sw.dart';
 /// be consistent with the languages listed in the AppLocalizations.supportedLocales
 /// property.
 abstract class AppLocalizations {
-  AppLocalizations(String locale) : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+  AppLocalizations(String locale)
+    : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
@@ -70,7 +71,8 @@ abstract class AppLocalizations {
     return Localizations.of<AppLocalizations>(context, AppLocalizations);
   }
 
-  static const LocalizationsDelegate<AppLocalizations> delegate = _AppLocalizationsDelegate();
+  static const LocalizationsDelegate<AppLocalizations> delegate =
+      _AppLocalizationsDelegate();
 
   /// A list of this localizations delegate along with the default localizations
   /// delegates.
@@ -82,22 +84,131 @@ abstract class AppLocalizations {
   /// Additional delegates can be added by appending to this list in
   /// MaterialApp. This list does not have to be used at all if a custom list
   /// of delegates is preferred or required.
-  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates = <LocalizationsDelegate<dynamic>>[
-    delegate,
-    GlobalMaterialLocalizations.delegate,
-    GlobalCupertinoLocalizations.delegate,
-    GlobalWidgetsLocalizations.delegate,
-  ];
+  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
+      <LocalizationsDelegate<dynamic>>[
+        delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ];
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
     Locale('en'),
-    Locale('sw')
+    Locale('sw'),
   ];
 
+  /// No description provided for @appTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Secure Notes'**
+  String get appTitle;
+
+  /// No description provided for @myNotes.
+  ///
+  /// In en, this message translates to:
+  /// **'My Notes'**
+  String get myNotes;
+
+  /// No description provided for @addNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Add Note'**
+  String get addNote;
+
+  /// No description provided for @editNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit Note'**
+  String get editNote;
+
+  /// No description provided for @title.
+  ///
+  /// In en, this message translates to:
+  /// **'Title'**
+  String get title;
+
+  /// No description provided for @description.
+  ///
+  /// In en, this message translates to:
+  /// **'Description'**
+  String get description;
+
+  /// No description provided for @save.
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get save;
+
+  /// No description provided for @cancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
+
+  /// No description provided for @delete.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete'**
+  String get delete;
+
+  /// No description provided for @emptyFieldError.
+  ///
+  /// In en, this message translates to:
+  /// **'Please fill in all fields'**
+  String get emptyFieldError;
+
+  /// No description provided for @authenticationRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Authentication Required'**
+  String get authenticationRequired;
+
+  /// No description provided for @authenticateToAccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Please authenticate to access your notes'**
+  String get authenticateToAccess;
+
+  /// No description provided for @authenticate.
+  ///
+  /// In en, this message translates to:
+  /// **'Authenticate'**
+  String get authenticate;
+
+  /// No description provided for @authenticationFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Authentication failed. Please try again.'**
+  String get authenticationFailed;
+
+  /// No description provided for @noNotes.
+  ///
+  /// In en, this message translates to:
+  /// **'No notes yet. Tap + to add one!'**
+  String get noNotes;
+
+  /// No description provided for @confirmDelete.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to delete this note?'**
+  String get confirmDelete;
+
+  /// No description provided for @yes.
+  ///
+  /// In en, this message translates to:
+  /// **'Yes'**
+  String get yes;
+
+  /// No description provided for @no.
+  ///
+  /// In en, this message translates to:
+  /// **'No'**
+  String get no;
 }
 
-class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
+class _AppLocalizationsDelegate
+    extends LocalizationsDelegate<AppLocalizations> {
   const _AppLocalizationsDelegate();
 
   @override
@@ -106,25 +217,26 @@ class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> 
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['en', 'sw'].contains(locale.languageCode);
+  bool isSupported(Locale locale) =>
+      <String>['en', 'sw'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
 }
 
 AppLocalizations lookupAppLocalizations(Locale locale) {
-
-
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
-    case 'en': return AppLocalizationsEn();
-    case 'sw': return AppLocalizationsSw();
+    case 'en':
+      return AppLocalizationsEn();
+    case 'sw':
+      return AppLocalizationsSw();
   }
 
   throw FlutterError(
     'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
     'an issue with the localizations generation tool. Please file an issue '
     'on GitHub with a reproducible sample app and the gen-l10n configuration '
-    'that was used.'
+    'that was used.',
   );
 }

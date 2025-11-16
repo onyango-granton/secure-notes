@@ -1,0 +1,20 @@
+{
+  "appTitle": "Maelezo Salama",
+  "myNotes": "Maelezo Yangu",
+  "addNote": "Ongeza Maelezo",
+  "editNote": "Hariri Maelezo",
+  "title": "Kichwa",
+  "description": "Maelezo",
+  "save": "Hifadhi",
+  "cancel": "Ghairi",
+  "delete": "Futa",
+  "emptyFieldError": "Tafadhali jaza sehemu zote",
+  "authenticationRequired": "Uthibitishaji Unahitajika",
+  "authenticateToAccess": "Tafadhali thibitisha ili kufikia maelezo yako",
+  "authenticate": "Thibitisha",
+  "authenticationFailed": "Uthibitishaji umeshindwa. Tafadhali jaribu tena.",
+  "noNotes": "Hakuna maelezo bado. Gusa + kuongeza!",
+  "confirmDelete": "Je, una uhakika unataka kufuta maelezo haya?",
+  "yes": "Ndiyo",
+  "no": "Hapana"
+}
